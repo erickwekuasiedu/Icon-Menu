@@ -1,4 +1,4 @@
-
+![GitHub Logo](ico-menu.jpg)
 ## ICON-MENU V1.0
 a fully customizable fontawsome menu bar with callbacks.
 Hey my name is Eric Asiedu, i created this template 
