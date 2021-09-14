@@ -45,7 +45,6 @@ const props={
   layer:'bar1', 
   icons:['fab fa-facebook','fab fa-twitter','fab fa-instagram','fab fa-whatsapp'],
   hrefs:['http://facebook.com','http://twitter.com','http://instagram.com','http://whatsup.com'],
-  clicks:[back,play,stop,forward],
   direction:'right',
   fontSize:'2rem',
   boxSize:'50px',
