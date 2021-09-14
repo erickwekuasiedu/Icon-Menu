@@ -31,6 +31,15 @@ Donation are welcome, paypal erickwekuasiedu@gmail.com Thank you
 
 ## EXAMPLE - using hrefs
 
+__HTML__
+
+````html
+ <div id="bar1"></div>
+````
+
+
+__JavaScript__
+
 ````javascript 
 const props={
   layer:'bar1', 
@@ -52,6 +61,15 @@ makeBar(props);
 
 
 ## EXAMPLE - using callbacks
+
+__HTML__
+
+````html
+ <div id="bar1"></div>
+````
+
+
+__JavaScript__
 
 ````javascript 
 //bar clicks
@@ -75,6 +93,7 @@ const props={
 
 makeBar(props);
 ````
+
 
 
 
