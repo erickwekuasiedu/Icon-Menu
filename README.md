@@ -48,8 +48,8 @@ const props={
   direction:'right',
   fontSize:'2rem',
   boxSize:'50px',
-  colorA:'red',
-  colorB:'white',
+  colorA:'#263238',
+  colorB:'#90a4ae',
   stretchAmount:'50px',
   transition:'all 500ms ease-out'
 }
