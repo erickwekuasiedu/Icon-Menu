@@ -1,40 +1,40 @@
 
-# ICON-MENU V1.0 
+## ICON-MENU V1.0
 a fully customizable fontawsome menu bar with callbacks.
 Hey my name is Eric Asiedu, i created this template 
 for my personal site and thought it might be useful to you.
-Donation are welcome at erickwekuasiedu@gmail.com Thank you
-----------------------------------------------------------------------------------------------------
+Donation are welcome, paypal erickwekuasiedu@gmail.com Thank you
 
-# INSTALL-
+
+## INSTALL-
 
 1. link fontawsome and icon-menu.css in your header
 2. link icon-menu.js script at the end of body tag
 3. now you can call makeBar() from any where in your script
 
-----------------------------------------------------------------------------------------------------
 
-# USAGE - Create an object with the following properties and pass it to makeBar function.
 
-	layer 				: <string,required> 	ID of html element to use as a container.
-	icons 				: [<string,required>] Array of fontawsome class string.
-  direction			: <string,required> use one of these (left,right,top,bottom).
-  hrefs					: [<string>] 	Array of urls to match each icon.
-  clicks				: [<callback>] 	Array of callback functions to match each icon.
-  fontSize			: <string,optinal> controls the size of the icons. add css units eg. "10pt" or "1.5rem"..
-  boxSize				: <string,optinal> controls size of box. add css units eg. "50px" or "10%" ...
-  colorA				: <string,optinal> base background color. any css color type
-  colorB				: <string,optinal> mouse over background color any css color type
-  stretchAmount	: <string,optinal> the amount to stretch button on mouse over. 50px or 10% ...
-  transition		: <string,optinal> controls animation speed. eg. "all 500ms ease-out"
-  
-------------------------------------------------------------------------------------------------
+## USAGE - Create an object with the following properties and pass it to makeBar function.
 
-# EXAMPLE - using hrefs
+	layer 			: <string,required> 	ID of html element to use as a container.
+	icons 			: [<string,required>] Array of fontawsome class string.
+  	direction		: <string,required> use one of these (left,right,top,bottom).
+  	hrefs			: [<string>,optinal] 	Array of urls to match each icon.
+  	clicks			: [<callback,optinal>] 	Array of callback functions to match each icon.
+  	fontSize		: <string,optinal> controls the size of the icons. add css units eg. "10pt" or "1.5rem"..
+  	boxSize			: <string,optinal> controls size of box. add css units eg. "50px" or "10%" ...
+  	colorA			: <string,optinal> base background color. any css color type
+  	colorB			: <string,optinal> mouse over background color any css color type
+  	stretchAmount		: <string,optinal> the amount to stretch button on mouse over. 50px or 10% ...
+  	transition		: <string,optinal> controls animation speed. eg. "all 500ms ease-out"
 
+
+## EXAMPLE - using hrefs
+
+````javascript 
 const props={
-	layer:'bar1', 
-	icons:['fab fa-facebook','fab fa-twitter','fab fa-instagram','fab fa-whatsapp'],
+  layer:'bar1', 
+  icons:['fab fa-facebook','fab fa-twitter','fab fa-instagram','fab fa-whatsapp'],
   hrefs:['http://facebook.com','http://twitter.com','http://instagram.com','http://whatsup.com'],
   clicks:[back,play,stop,forward],
   direction:'right',
@@ -47,11 +47,13 @@ const props={
 }
 
 makeBar(props);
+````
 
-----------------------------------------------------------------------------------------------------
 
-# EXAMPLE - using callbacks
 
+## EXAMPLE - using callbacks
+
+````javascript 
 //bar clicks
 const play=function(){alert("play")}
 const stop=function(){alert("stop")}
@@ -59,8 +61,8 @@ const back=function(){alert("back")}
 const forward=function(){alert("forward")}
 
 const props={
-	layer:'bar1', 
-	icons:['fas fa-fast-backward','fas fa-play','fas fa-stop','fas fa-fast-forward'],
+  layer:'bar1', 
+  icons:['fas fa-fast-backward','fas fa-play','fas fa-stop','fas fa-fast-forward'],
   clicks:[back,play,stop,forward],
   direction:'top',
   fontSize:'1rem',
@@ -72,7 +74,7 @@ const props={
 }
 
 makeBar(props);
+````
 
----------------------------------------------------------------------------------------------------
 
 
