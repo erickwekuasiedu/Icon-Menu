@@ -14,7 +14,6 @@
 }
 
 
-
 .flex-row{
   display:flex;
   flex-direction:row;
@@ -38,29 +37,28 @@
 
 .box:hover{
   cursor:pointer;
+  background-color:white;
+  color:#01579b;
 }
 
 
 .stretch-right{
   padding-left: var(--s-pad);
-  background-color: #e040fb;
+
 }
 
 .stretch-left{
   padding-right: var(--s-pad);
   margin-left: var(--s-mag);
-  background-color: #e040fb;
 }
 
 .stretch-top{
   padding-bottom: var(--s-pad);
   margin-top: var(--s-mag);
-  background-color: #e040fb;
   
 }
 
 .stretch-bottom{
   padding-top: var(--s-pad);
-  background-color: #e040fb;
   
 }
