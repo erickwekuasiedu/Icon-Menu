@@ -1,5 +1,4 @@
-
-.box{
+.box {
   width:50px;
   height:50px;
   display:flex;
@@ -13,52 +12,44 @@
   transition: all 500ms ease-out;  
 }
 
-
-.flex-row{
+.flex-row {
   display:flex;
   flex-direction:row;
-  
 }
 
 .flex-column{
   display:flex;
   flex-direction:column;
- 
 }
 
-.top{
+.top {
   margin:0 1px;
 }
 
-.bottom{
+.bottom {
   margin:0 1px;
 }
 
-
-.box:hover{
+.box:hover {
   cursor:pointer;
   background-color:white;
   color:#01579b;
 }
 
-
-.stretch-right{
+.stretch-right {
   padding-left: var(--s-pad);
-
 }
 
-.stretch-left{
+.stretch-left {
   padding-right: var(--s-pad);
   margin-left: var(--s-mag);
 }
 
-.stretch-top{
+.stretch-top {
   padding-bottom: var(--s-pad);
   margin-top: var(--s-mag);
-  
 }
 
-.stretch-bottom{
+.stretch-bottom {
   padding-top: var(--s-pad);
-  
 }
