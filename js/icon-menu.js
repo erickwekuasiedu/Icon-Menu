@@ -6,36 +6,38 @@ Donation are welcome on paypal erickwekuasiedu@gmail.com Thank you.
 ----------------------------------------------------------------------------------------------------
 */
 
-//main function
+//
 const makeBar = function(options) {
 
   //
-  const layer = document.querySelector('#'+options.layer);
+  const layer = document.querySelector(`#${options.layer}`);
+  if (layer == null) {
+    return;
+  }
 
   //set box propeties and add icon
   const makeBox = function(iconTag, id) {
+    if (iconTag == null) {
+      return;
+    }
 
-    //
+    //define a box to hold the icon
     const box = document.createElement('div');
     box.classList.add('icon-menu-box');
     box.style.width  = options.boxSize;
     box.style.height = options.boxSize;
     box.style.backgroundColor = options.colorA;
+    box.style.setProperty("--s-stretchAmount", options.stretchAmount );
 
     //
     iconTag.style.color = options.colorB;
     box.appendChild(iconTag);
 
     //
-    box.style.setProperty("--s-pad", options.stretchAmount );
-
-    //
     box.addEventListener('mouseenter', function(evnt) {
 
       //
       box.style.backgroundColor = options.colorB;
-
-      //
       if ((iconTag = box.querySelector('i') || box.querySelector('svg')) != null) {
         iconTag.style.color = options.colorA;
       };
@@ -50,8 +52,6 @@ const makeBar = function(options) {
 
       //
       box.style.backgroundColor = options.colorA;
-
-      //
       if ((iconTag = box.querySelector('i') || box.querySelector('svg')) != null) {
         iconTag.style.color = options.colorB;
       };
@@ -79,33 +79,38 @@ const makeBar = function(options) {
     layer.classList.toggle('icon-menu-flex-column');
   }
 
+  //
   layer.style.setProperty("--s-alignY", options.direction.replace('top','start').replace('bottom','end'));
   layer.style.setProperty("--s-alignX", options.direction.replace('left','start').replace('right','end'));
   layer.style.setProperty("--s-boxSize", options.boxSize);
 
-  //loop throug icons list and create
+  //create the icons
   for (let i=0; i<options.icons.length; i++) {
 
-    //link decoration
+    //
     const linkTag = document.createElement('a');
-    if (options.hrefs) linkTag.href = options.hrefs[i];
     linkTag.style.textDecoration = "none";
+
+    //
+    if (options.hrefs) {
+      linkTag.href = options.hrefs[i];
+    } 
 
     //icon decoration
     const iconTag = document.createElement('i');
     iconTag.style.fontSize = options.fontSize;
     iconTag.style.transition = options.transition;
 
-    //loop through each icon string and add class
-    for (let c of options.icons[i].split(" ")) {
-      iconTag.classList.add(c);
+    //add class for each icon
+    for (let iconClass of options.icons[i].split(" ")) {
+      iconTag.classList.add(iconClass);
     }
 
-    //create a box with icon and aling
+    //
     const box = makeBox(iconTag, i);
     box.classList.toggle(options.direction);
 
-    //add the box with a link to container
+    //
     linkTag.appendChild(box);
     layer.appendChild(linkTag);
 
