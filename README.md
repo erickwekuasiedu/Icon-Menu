@@ -44,7 +44,7 @@ __JavaScript__
 const options = {
   layer		: 'bar1', 
   icons		: ['fab fa-facebook','fab fa-twitter','fab fa-instagram','fab fa-whatsapp'],
-  hrefs		: ['http://facebook.com','http://twitter.com','http://instagram.com','http://whatsup.com'],
+  hrefs		: ['http://facebook.com','http://twitter.com','http://instagram.com','http://whatsapp.com'],
   direction	: 'left',
   fontSize	: '2rem',
   boxSize	: '50px',

@@ -15,6 +15,9 @@ const makeBar = function(options) {
     return;
   }
 
+  //
+  layer.innerHTML = '';
+  
   //set box propeties and add icon
   const makeBox = function(iconTag, id) {
     if (iconTag == null) {
@@ -28,6 +31,7 @@ const makeBar = function(options) {
     box.style.height = options.boxSize;
     box.style.backgroundColor = options.colorA;
     box.style.setProperty("--s-stretchAmount", options.stretchAmount );
+    box.style.setProperty("--s-transition", options.transition );
 
     //
     iconTag.style.color = options.colorB;
