@@ -45,12 +45,12 @@ const options = {
   layer		: 'bar1', 
   icons		: ['fab fa-facebook','fab fa-twitter','fab fa-instagram','fab fa-whatsapp'],
   hrefs		: ['http://facebook.com','http://twitter.com','http://instagram.com','http://whatsup.com'],
-  direction	: 'right',
+  direction	: 'left',
   fontSize	: '2rem',
   boxSize	: '50px',
   colorA	: '#263238',
   colorB	: '#90a4ae',
-  stretchAmount	: '50px',
+  stretchAmount	: '100px',
   transition	: 'all 500ms ease-out'
 };
 
