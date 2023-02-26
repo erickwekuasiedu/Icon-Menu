@@ -41,7 +41,7 @@ __HTML__
 __JavaScript__
 
 ````javascript 
-const props={
+const options = {
   layer:'bar1', 
   icons:['fab fa-facebook','fab fa-twitter','fab fa-instagram','fab fa-whatsapp'],
   hrefs:['http://facebook.com','http://twitter.com','http://instagram.com','http://whatsup.com'],
@@ -54,7 +54,7 @@ const props={
   transition:'all 500ms ease-out'
 }
 
-makeBar(props);
+makeBar(options);
 ````
 
 
@@ -72,12 +72,12 @@ __JavaScript__
 
 ````javascript 
 //bar clicks
-const play=function(){alert("play")}
-const stop=function(){alert("stop")}
-const back=function(){alert("back")}
-const forward=function(){alert("forward")}
+const play 	= function(){alert("play")}
+const stop 	= function(){alert("stop")}
+const back 	= function(){alert("back")}
+const forward 	= function(){alert("forward")}
 
-const props={
+const props = {
   layer:'bar1', 
   icons:['fas fa-fast-backward','fas fa-play','fas fa-stop','fas fa-fast-forward'],
   clicks:[back,play,stop,forward],
@@ -90,7 +90,7 @@ const props={
   transition:'all 500ms ease-out'
 }
 
-makeBar(props);
+makeBar(options);
 ````
 
 
