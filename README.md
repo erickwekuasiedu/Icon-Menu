@@ -81,13 +81,13 @@ const options = {
   layer		: 'bar1', 
   icons		: ['fas fa-fast-backward','fas fa-play','fas fa-stop','fas fa-fast-forward'],
   clicks	: [back,play,stop,forward],
-  direction	: 'top',
+  direction	: 'bottom',
   fontSize	: '1rem',
   boxSize	: '50px',
   colorA	: '#263238',
   colorB	: '#90a4ae',
   stretchAmount	: '10px',
-  transition	: 'all 500ms ease-out'
+  transition	: 'all 200ms ease-out'
 };
 
 makeBar(options);
