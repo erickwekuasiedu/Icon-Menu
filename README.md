@@ -77,7 +77,7 @@ const stop 	= function(){alert("stop")}
 const back 	= function(){alert("back")}
 const forward 	= function(){alert("forward")}
 
-const props = {
+const options = {
   layer		: 'bar1', 
   icons		: ['fas fa-fast-backward','fas fa-play','fas fa-stop','fas fa-fast-forward'],
   clicks	: [back,play,stop,forward],
