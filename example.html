@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icon-Menu</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/icon-menu.css">
+    <script src="./js/icon-menu.js"></script>
+</head>
+
+<body>
+
+    <style>
+        body { margin: 0px; padding: 0px; color: #ffffff;}
+        .flex-center { display: flex; justify-content: center; align-items: center; position: relative;}
+    </style>
+
+    <div class="flex-center" style="background-color: #1f1f1f; height: 100vh;">
+        <div class="flex-center" style=" width: 600px; height: 600px; background-color: #000000;">
+            
+            <div id="bar1"  style="position:relative; flex:1;left: 0px;">LEFT</div>
+            <div id="bar2"  style="position:relative; flex:0">RIGHT</div>
+            <div id="bar3"  style="position:absolute; align-self: start;">TOP</div>
+            <div id="bar4"  style="position:absolute; align-self: end;">BOTTOM</div>
+            
+        </div>
+    </div>
+
+    <script>
+
+        //left
+        makeBar({
+            layer		    : 'bar1', 
+            icons		    : ['fab fa-facebook','fab fa-twitter','fab fa-instagram','fab fa-whatsapp'],
+            hrefs		    : ['http://facebook.com','http://twitter.com','http://instagram.com','http://whatsapp.com'],
+            direction	    : 'left',
+            fontSize	    : '2rem',
+            boxSize	        : '50px',
+            colorA	        : '#ff0042',
+            colorB	        : '#ffffff',
+            stretchAmount	: '100px',
+            transition	    : 'all 300ms ease-out'
+        });
+
+        //right
+        makeBar({
+            layer		    : 'bar2', 
+            icons		    : ['fab fa-facebook','fab fa-twitter','fab fa-instagram','fab fa-whatsapp'],
+            hrefs		    : ['http://facebook.com','http://twitter.com','http://instagram.com','http://whatsapp.com'],
+            direction	    : 'right',
+            fontSize	    : '2rem',
+            boxSize	        : '50px',
+            colorA	        : '#383838',
+            colorB	        : '#ffc700',
+            stretchAmount	: '100px',
+            transition	    : 'all 300ms ease-out'
+        });
+
+        //top
+        makeBar({
+            layer		    : 'bar3', 
+            icons		    : ['fab fa-facebook','fab fa-twitter','fab fa-instagram','fab fa-whatsapp'],
+            hrefs		    : ['http://facebook.com','http://twitter.com','http://instagram.com','http://whatsapp.com'],
+            direction	    : 'top',
+            fontSize	    : '2rem',
+            boxSize	        : '50px',
+            colorA	        : '#008831',
+            colorB	        : '#ffffff',
+            stretchAmount	: '100px',
+            transition	    : 'all 300ms ease-out'
+        });
+
+        //bottom
+        makeBar({
+            layer		    : 'bar4', 
+            icons		    : ['fab fa-facebook','fab fa-twitter','fab fa-instagram','fab fa-whatsapp'],
+            hrefs		    : ['http://facebook.com','http://twitter.com','http://instagram.com','http://whatsapp.com'],
+            direction	    : 'bottom',
+            fontSize	    : '2rem',
+            boxSize	        : '50px',
+            colorA	        : '#263238',
+            colorB	        : '#90a4ae',
+            stretchAmount	: '100px',
+            transition	    : 'all 300ms ease-out'
+        });
+
+    </script>
+    
+</body>
+</html>
