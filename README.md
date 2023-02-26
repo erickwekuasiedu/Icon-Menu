@@ -42,17 +42,17 @@ __JavaScript__
 
 ````javascript 
 const options = {
-  layer:'bar1', 
-  icons:['fab fa-facebook','fab fa-twitter','fab fa-instagram','fab fa-whatsapp'],
-  hrefs:['http://facebook.com','http://twitter.com','http://instagram.com','http://whatsup.com'],
-  direction:'right',
-  fontSize:'2rem',
-  boxSize:'50px',
-  colorA:'#263238',
-  colorB:'#90a4ae',
-  stretchAmount:'50px',
-  transition:'all 500ms ease-out'
-}
+  layer		: 'bar1', 
+  icons		: ['fab fa-facebook','fab fa-twitter','fab fa-instagram','fab fa-whatsapp'],
+  hrefs		: ['http://facebook.com','http://twitter.com','http://instagram.com','http://whatsup.com'],
+  direction	: 'right',
+  fontSize	: '2rem',
+  boxSize	: '50px',
+  colorA	: '#263238',
+  colorB	: '#90a4ae',
+  stretchAmount	: '50px',
+  transition	: 'all 500ms ease-out'
+};
 
 makeBar(options);
 ````
@@ -78,17 +78,17 @@ const back 	= function(){alert("back")}
 const forward 	= function(){alert("forward")}
 
 const props = {
-  layer:'bar1', 
-  icons:['fas fa-fast-backward','fas fa-play','fas fa-stop','fas fa-fast-forward'],
-  clicks:[back,play,stop,forward],
-  direction:'top',
-  fontSize:'1rem',
-  boxSize:'50px',
-  colorA:'#263238',
-  colorB:'#90a4ae',
-  stretchAmount:'10px',
-  transition:'all 500ms ease-out'
-}
+  layer		: 'bar1', 
+  icons		: ['fas fa-fast-backward','fas fa-play','fas fa-stop','fas fa-fast-forward'],
+  clicks	: [back,play,stop,forward],
+  direction	: 'top',
+  fontSize	: '1rem',
+  boxSize	: '50px',
+  colorA	: '#263238',
+  colorB	: '#90a4ae',
+  stretchAmount	: '10px',
+  transition	: 'all 500ms ease-out'
+};
 
 makeBar(options);
 ````
