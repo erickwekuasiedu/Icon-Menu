@@ -17,9 +17,53 @@ const makeBar = function(options) {
 
   //
   layer.innerHTML = '';
-  
-  //set box propeties and add icon
-  const makeBox = function(iconTag, id) {
+
+  //
+  if ((options.direction === 'top' || options.direction === 'bottom')) {
+    layer.classList.toggle('icon-menu-flex-row');
+  } else {
+    layer.classList.toggle('icon-menu-flex-column');
+  }
+
+  //
+  layer.style.setProperty("--s-alignY", options.direction.replace('top','start').replace('bottom','end'));
+  layer.style.setProperty("--s-alignX", options.direction.replace('left','start').replace('right','end'));
+  layer.style.setProperty("--s-boxSize", options.boxSize);
+
+  //create the icons
+  for (let i=0; i<options.icons.length; i++) {
+
+    //
+    const linkTag = document.createElement('a');
+    linkTag.style.textDecoration = "none";
+
+    //
+    if (options.hrefs) {
+      linkTag.href = options.hrefs[i];
+    } 
+
+    //icon decoration
+    const iconTag = document.createElement('i');
+    iconTag.style.fontSize = options.fontSize;
+    iconTag.style.transition = options.transition;
+
+    //add class for each icon
+    for (let iconClass of options.icons[i].split(" ")) {
+      iconTag.classList.add(iconClass);
+    }
+
+    //
+    const box = makeBox(iconTag, i);
+    box.classList.toggle(options.direction);
+
+    //
+    linkTag.appendChild(box);
+    layer.appendChild(linkTag);
+
+  }
+
+  //sets box propeties and add icon
+  function makeBox(iconTag, id) {
     if (iconTag == null) {
       return;
     }
@@ -73,50 +117,6 @@ const makeBar = function(options) {
     }
 
     return box;
-
-  }
-
-  //
-  if ((options.direction === 'top' || options.direction === 'bottom')) {
-    layer.classList.toggle('icon-menu-flex-row');
-  } else {
-    layer.classList.toggle('icon-menu-flex-column');
-  }
-
-  //
-  layer.style.setProperty("--s-alignY", options.direction.replace('top','start').replace('bottom','end'));
-  layer.style.setProperty("--s-alignX", options.direction.replace('left','start').replace('right','end'));
-  layer.style.setProperty("--s-boxSize", options.boxSize);
-
-  //create the icons
-  for (let i=0; i<options.icons.length; i++) {
-
-    //
-    const linkTag = document.createElement('a');
-    linkTag.style.textDecoration = "none";
-
-    //
-    if (options.hrefs) {
-      linkTag.href = options.hrefs[i];
-    } 
-
-    //icon decoration
-    const iconTag = document.createElement('i');
-    iconTag.style.fontSize = options.fontSize;
-    iconTag.style.transition = options.transition;
-
-    //add class for each icon
-    for (let iconClass of options.icons[i].split(" ")) {
-      iconTag.classList.add(iconClass);
-    }
-
-    //
-    const box = makeBox(iconTag, i);
-    box.classList.toggle(options.direction);
-
-    //
-    linkTag.appendChild(box);
-    layer.appendChild(linkTag);
 
   }
 
